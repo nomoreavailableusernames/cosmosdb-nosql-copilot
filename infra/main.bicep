@@ -8,12 +8,12 @@ param environmentName string
 @minLength(1)
 @allowed([
   'australiaeast'
-  'westeurope'
-  'japaneast'
-  'uksouth'
   'eastus'
-  'southcentralus'
   'eastus2'
+  'japaneast'
+  'southcentralus'
+  'uksouth'
+  'westeurope'
 ])
 @description('Primary location for all resources.')
 param location string
@@ -56,7 +56,9 @@ module identity 'app/identity.bicep' = {
   name: 'identity'
   scope: resourceGroup
   params: {
-    identityName: !empty(userAssignedIdentityName) ? userAssignedIdentityName : '${abbreviations.userAssignedIdentity}-${resourceToken}'
+    identityName: !empty(userAssignedIdentityName)
+      ? userAssignedIdentityName
+      : '${abbreviations.userAssignedIdentity}-${resourceToken}'
     location: location
     tags: tags
   }
