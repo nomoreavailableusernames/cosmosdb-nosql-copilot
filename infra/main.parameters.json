@@ -2,14 +2,32 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
+    "openAiAccountName": {
+      "value": "openai-ffgwtywvyo4po"
+    },
+    "cosmosDbAccountName": {
+      "value": "cosmos-ffgwtywvyo4po"
+    },
+    "userAssignedIdentityName": {
+      "value": "ua-id-ffgwtywvyo4po"
+    },
+    "appServicePlanName": {
+      "value": "web-ffgwtywvyo4po"
+    },
+    "appServiceWebAppName": {
+      "value": "web-ffgwtywvyo4po"
+    },
+    "serviceName": {
+      "value": "web"
+    },
     "environmentName": {
-      "value": "${AZURE_ENV_NAME}"
+      "value": "rg-cosmosdb-copilot"
     },
     "location": {
-      "value": "${AZURE_LOCATION}"
+      "value": "eastus2"
     },
     "principalId": {
-      "value": "${AZURE_PRINCIPAL_ID}"
+      "value": "7e220608-280e-4b1a-b8e5-afb87b50dde8"
     }
   }
 }

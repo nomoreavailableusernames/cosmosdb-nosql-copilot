@@ -5,8 +5,8 @@
 
 targetScope = 'subscription'
 
-param environmentName string = 'testing'
-param location string = 'westeurope'
+param environmentName string = 'rg-cosmosdb-copilot'
+param location string = 'eastus2'
 
 module main 'main.bicep' = {
   name: 'main'
