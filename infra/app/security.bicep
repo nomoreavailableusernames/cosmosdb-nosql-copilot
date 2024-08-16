@@ -63,7 +63,7 @@ module openaiUserAssignment '../core/security/role/assignment.bicep' = if (!empt
       '5e0bd9bd-7b93-4f28-af87-19fc36ad61bd'
     ) // Cognitive Services OpenAI User built-in role
     principalId: userPrincipalId // Principal to assign role
-    principalType: 'User' // Current deployment user
+    principalType: 'ServicePrincipal' // Current deployment user
   }
 }
 
